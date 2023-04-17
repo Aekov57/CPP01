@@ -6,7 +6,7 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 10:28:26 by misimon           #+#    #+#             */
-/*   Updated: 2023/04/13 12:15:40 by misimon          ###   ########.fr       */
+/*   Updated: 2023/04/17 16:18:06 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main() {
 	Zombie *zombie = zombieHorde(10, "bijour");
-	for(int i = 0; i < 10; i++) {
+	for(int i = 0; i < 10; i++)
 		zombie[i].announce();
-	}
 	delete[] zombie;
+	return(0);
 }
 
