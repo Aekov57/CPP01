@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 17:04:31 by misimon           #+#    #+#             */
-/*   Updated: 2023/04/25 14:10:11 by misimon          ###   ########.fr       */
+/*   Created: 2023/04/25 16:51:07 by misimon           #+#    #+#             */
+/*   Updated: 2023/04/26 14:46:52 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Harl.hpp"
 
-Weapon::Weapon(){}
-
-Weapon::Weapon(std::string type): _type(type) {}
-
-void Weapon::setType(std::string type) {
-	this->_type = type;
+int main()
+{
+	Harl harl;
+	
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("DEBUG");
+	return(1);
 }
-
-std::string Weapon::getType() {
-	return(this->_type);
-}
-
-Weapon::~Weapon() {}

@@ -6,7 +6,7 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 16:04:31 by misimon           #+#    #+#             */
-/*   Updated: 2023/04/18 17:05:23 by misimon          ###   ########.fr       */
+/*   Updated: 2023/04/19 15:26:51 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ HumanB::~HumanB() {
 }
 
 void HumanB::attack() {
-	std::cout << "\033[1;49;92m" << this->_name << " attack with their " << this->_weapon.getType() << "\033[0m" << std::endl;
+	std::cout << "\033[1;49;92m" << this->_name << " attack with their " << this->_weapon->getType() << "\033[0m" << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &weapon) {

@@ -6,7 +6,7 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:52:47 by misimon           #+#    #+#             */
-/*   Updated: 2023/04/18 17:05:19 by misimon          ###   ########.fr       */
+/*   Updated: 2023/04/19 15:25:52 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class HumanB
 {
 private:
 	std::string _name;
-	Weapon _weapon;
+	Weapon *_weapon;
 public:
 	HumanB();
 	HumanB(std::string name);

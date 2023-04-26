@@ -6,22 +6,15 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:57:31 by misimon           #+#    #+#             */
-/*   Updated: 2023/04/18 16:51:22 by misimon          ###   ########.fr       */
+/*   Updated: 2023/04/19 15:46:15 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(){}
-
-HumanA::HumanA(std::string name, Weapon weapon) {
-	this->_weapon = weapon;
+HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon) {
 	this->_name = name;
 	std::cout << "\033[1;49;36m" << this->_name << " created  with " << this->_weapon.getType() << " !" << std::endl;
-}
-
-HumanA::HumanA(std::string name) {
-	this->_name = name;
 }
 
 HumanA::~HumanA() {
