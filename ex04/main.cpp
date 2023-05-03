@@ -6,7 +6,7 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:10:25 by misimon           #+#    #+#             */
-/*   Updated: 2023/04/25 16:21:06 by misimon          ###   ########.fr       */
+/*   Updated: 2023/05/03 13:38:33 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,18 @@ void replaceFile(std::string inContent, char **av)
 	std::ofstream outFiles(std::string(av[1]) + ".replace");
 	if(outFiles.fail())
 		return ;
-	for(size_t i = 0; i < inContent.size(); i++)
+	for(size_t i = 0; inContent[i]; NULL)
 	{
 		temp = inContent.find(av[2], i);
 		if(temp != -1 && temp == i)
 		{
 			outFiles << av[3];
 			i += std::string(av[3]).size();
+			continue ;
 		}
 		else
 			outFiles << inContent[i];
+		i++;
 	}
 	outFiles.close();
 }
@@ -56,7 +58,6 @@ int main(int ac, char **av)
 		if(!inFiles.eof())
 			inContent += "\n";
 	}
-	std::cout << inContent << std::endl;
 	inFiles.close();
 	replaceFile(inContent, av);
 	return (EXIT_SUCCESS);

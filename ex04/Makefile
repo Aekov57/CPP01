@@ -6,7 +6,7 @@
 #    By: misimon <misimon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 15:19:15 by misimon           #+#    #+#              #
-#    Updated: 2023/04/25 15:47:32 by misimon          ###   ########.fr        #
+#    Updated: 2023/05/03 13:40:49 by misimon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,6 @@ clean :
 	rm -f $(OBJS)
 
 fclean : clean
-	rm -f ./replace
+	rm -f $(NAME)
 
 re : fclean all
